@@ -1,0 +1,278 @@
+header {
+    background-color: #F1F3FF;
+    padding: 20px;
+}
+
+body {
+    font-family: 'Helvetica';
+}
+
+
+#banner h1 {
+    position: absolute;
+    width: 568px;
+    height: 108px;
+    left: 136px;
+    top: 177px;
+
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+}
+
+#banner p {
+    position: absolute;
+    width: 468px;
+    height: 60px;
+    left: 136px;
+    top: 301px;
+
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#banner button {
+    box-sizing: border-box;
+    
+    position: relative;
+width: 170px;
+height: 45px;
+left: 100px;
+top: 277px;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 12px;
+}
+
+#banner .mobil {
+width: 660px;
+height: 407px;
+left: 1440px;
+top: 97px;
+}
+
+
+#our .servis {
+    position: absolute;
+    width: 459px;
+    height: 428px;
+    left: 206px;
+    top: 604px;
+}
+
+main {
+    background-color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: red;
+}
+
+
+#btnsw {
+    margin-left: 30%;
+}
+
+#our p {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#our ul {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#our .title {
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+}
+
+#our .subtitle {
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 20px;
+
+}
+
+#why .title {
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+margin-top: 15%;
+padding-left: 60px;
+}
+
+#why .subtitle {
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 20px;
+padding-left: 60px;
+}
+
+#why .card {
+    padding: 10px;
+}
+
+#why h5 {
+    font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+}
+
+#why p {
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 20px;
+}
+
+#testimonial .title {
+text-align: center;
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+}
+
+#testimonial .subtitle {
+text-align: center;
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 20px;
+}
+
+#testimonial {
+    margin-top: 30px;
+}
+
+
+.stars {
+    color: orange;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    width: 80px;
+    height: 16px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#testimonial img {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+#testimonial p {
+    margin-top: 20px;
+}
+
+#testimonial .card {
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.btn-carousel img:hover {
+    color: grey;
+    
+}
+
+#sewa {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    width: 850px;
+    height: 230px;
+    background-color: blue;
+    color: white;
+}
+
+#sewa h5 {
+    font-size: 26px;
+}
+
+#sewa p {
+    font-size: 12px;
+}
+
+#faq .accordion-item,
+#faq .accordion,
+#faq .accordion-header {
+    border: none;
+}
+
+#faq {
+    padding: 10px;
+    margin: 100px 30px ;
+}
+
+#faq .title {
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 36px;
+
+margin-left: 30px;
+}
+
+#faq .subtitle {
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 20px;
+
+margin-left: 30px;
+}
+
+footer {
+    padding: 20px;
+    /* margin-left: 30px; */
+    margin: 100px 30px ;
+}
+
+
+#address {
+    font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 20px;
+}
+
+#navigation {
+    font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+}
