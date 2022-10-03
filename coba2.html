@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .content-1 {
+            display: inline;
+            margin-right: 100px;
+        }
+
+        .content-2 {
+            display: inline;
+        }
+
+        .content-3 {
+            border: 5px solid black;
+            width: 100px;
+            height: 100px;
+            margin-left: 50px;
+
+        }
+
+        .box-model {
+            width: 300px;
+            height: 100px;
+            margin: 40px 50px;
+            padding: 150px;
+            border: 1px solid black;
+        }
+
+        .box-model-title {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .flexbox-container {
+            display: flex;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h2 class="content-1">Konten1</h2>
+    <h2 class="content-2">Konten2</h2>
+    <h2 class="content-3">Konten3</h2>
+    <div class="box-model">
+        <p class="box-model-title">Box Model</p>
+    </div>
+
+    <div class="flexbox-container">
+        <div>Flex 1</div>
+        <div>Flex 2</div>
+        <div>Flex 3</div>
+    </div>
 </body>
+
 </html>

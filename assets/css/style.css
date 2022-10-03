@@ -5,7 +5,7 @@ header {
 }
 
 body {
-    font-family: 'Helvetica';
+    font-family: 'Sans-Serif';
 }
 
 main {
@@ -24,6 +24,23 @@ main {
     font-weight: 700;
     font-size: 36px;
     line-height: 150%;
+}
+
+@media screen and (max-width:800px) {
+    #banner h1 {
+        position: absolute;
+        width: 400px;
+        height: 108px;
+        left: 100px;
+        top: 150px;
+    
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 500;
+        font-size: px;
+        line-height: 200%;
+        margin-right: 50px;
+    }
 }
 
 #banner p {
@@ -64,12 +81,21 @@ main {
 
 #our .service {
     position: absolute;
-    width: 459px;
-    height: 428px;
+    width: 450px;
+    height: 430px;
     left: 206px;
     top: 604px;
 }
 
+@media screen and (max-width: 800px) {
+    #our .service {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        left: 360px;
+        top: 740px;
+    }
+}
 
 
 .navbar-light .navbar-nav .nav-link {
@@ -78,7 +104,7 @@ main {
 
 
 #btnsw {
-    margin-left: 30%;
+    margin-left: 50%;
 }
 
 #our p {
@@ -131,6 +157,7 @@ main {
     padding: 15px;
 }
 
+
 #why h5 {
     font-style: normal;
     font-weight: 700;
@@ -143,6 +170,48 @@ main {
     font-weight: 300;
     font-size: 14px;
 
+}
+
+@media screen and (max-width:800px) {
+    #why .title {
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        margin-top: 150px;
+        padding-left: 60px;
+    }
+    
+    #why .subtitle {
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 60px;
+    }
+    
+    #why .card {
+        padding: 20px 20px;
+        margin-top: 50px;
+        align-items: center;
+    }
+    
+    
+    #why h5 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    #why p {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    
+    }
 }
 
 #testimonial .title {
