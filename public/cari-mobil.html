@@ -80,69 +80,72 @@
     <section class="shape-search bg-white" id="search">
         <!-- <div class="slider-shape"></div> -->
         <div class="container px-4 py">
-            <div class="row search-inner bg-white d-flex">
-                <div class="input-group col-md-6">
-                    <label>
-                        Tipe Driver
-                    </label>
-                    <select class="form-control" 
-                    id="tipe_driver" 
-                    name="tipe-driver"
-                    onchange="onSelectDriverType()">
-                        <option>Pilih Tipe Driver</option>
-                        <option value="dengan_sopir">Dengan Sopir</option>
-                        <option value="tanpa_sopir">Tanpa Sopir (Lepas Kunci)</option>
-                      </select>
-                    <!-- <input type="text" name="tipe-driver" placeholder="Pilih Tipe Driver"> -->
+            <form id="form_filter_submit">
+                <div class="row search-inner bg-white d-flex">
+                    <div class="input-group col-md-6">
+                        <label>
+                            Tipe Driver
+                        </label>
+                        <select class="form-control" 
+                        id="tipe_driver" 
+                        name="tipe-driver">
+                            <option>Pilih Tipe Driver</option>
+                            <option value="dengan_sopir">Dengan Sopir</option>
+                            <option value="tanpa_sopir">Tanpa Sopir (Lepas Kunci)</option>
+                          </select>
+                        <!-- <input type="text" name="tipe-driver" placeholder="Pilih Tipe Driver"> -->
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            Tanggal
+                        </label>
+                        <i class="fa fa-calendar"></i>
+                        <input id= "tanggal_booking" 
+                        type="date"
+                        name="tipe-driver" 
+                        placeholder="Pilih Tanggal">
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            Waktu Jemput/Ambil
+                        </label>
+                        <i class="fa fa-clock-o"></i>
+                        <select id="waktu_booking" 
+                        class="form-control">
+                            <option>Pilih waktu jemput</option>
+                            <option>08.00</option>
+                            <option>09.00</option>
+                            <option>10.00</option>
+                            <option>11.00</option>
+                            <option>12.00</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            Jumlah Penumpang (optional)
+                        </label>
+                        <i class="fa fa-user"></i>
+                        <input
+                        id="total_penumpang" 
+                        type="number" 
+                        name="jumlah-penumpang" 
+                        placeholder="Jumlah Penumpang">
+                    </div>
+                    <div class="input-group">
+                        <button
+                        id="btn-filter"
+                        type="submit" 
+                        class="btn btn-success">Cari Mobil</button>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label>
-                        Tanggal
-                    </label>
-                    <i class="fa fa-calendar"></i>
-                    <input id= "tanggal_booking" 
-                    type="date"
-                    name="tipe-driver" 
-                    placeholder="Pilih Tanggal"
-                    onchange="onSelectBookingDate()">
-                </div>
-                <div class="input-group">
-                    <label>
-                        Waktu Jemput/Ambil
-                    </label>
-                    <i class="fa fa-clock-o"></i>
-                    <select id="waktu_booking" 
-                    class="form-control"
-                    onchange="onSelectTimeBooking()">
-                        <option>Pilih waktu jemput</option>
-                        <option>08.00</option>
-                        <option>09.00</option>
-                        <option>10.00</option>
-                        <option>11.00</option>
-                        <option>12.00</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label>
-                        Jumlah Penumpang (optional)
-                    </label>
-                    <i class="fa fa-user"></i>
-                    <input
-                    id="total_penumpang" 
-                    type="number" 
-                    name="jumlah-penumpang" 
-                    placeholder="Jumlah Penumpang"
-                    onchange="onSelectTotalPassenger()">
-                </div>
-                <div class="input-group">
-                    <button type="submit" class="btn btn-success">Cari Mobil</button>
-                </div>
-            </div>
+            </form>
         </div>
     </section>
 
     <!-- OUTPUT DATA FROM JSON -->
-    <div id="result">Result bos</div>
+    <button id="load-btn">Load</button>
+    <button id="clear-btn">Clear</button>
+    <div id="cars-container"></div>
 
 
     <!-- Start Footer Section -->
@@ -233,8 +236,10 @@
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/owl.carousel.js"></script>
-<script src="scripts/main.js"></script>
-<script src="scripts/binar.js"></script>
+<script type="text/javascript" src="./scripts/binar.js"></script>
+<script type="text/javascript" src="./scripts/app.js"></script>
+<script type="text/javascript" src="./scripts/car.js"></script>
+<script type="text/javascript" src="./scripts/main.js"></script>
 <script>
 $('.loop').owlCarousel({
     center: true,
