@@ -6,8 +6,9 @@ class App {
     this.onSubmitFormFilter = document.getElementById('form_filter_submit');
     this.onSelectedDriverType = document.getElementById('tipe_driver');
     this.onSelectedBookingDate = document.getElementById('tanggal_booking');
-    this.onSelecteTimeBooking = document.getElementById('waktu_booking');
+    this.onSelectedTimeBooking = document.getElementById('waktu_booking');
     this.onSelectedTotalPassenger = document.getElementById('total_penumpang');
+
   }
 
   async init() {
@@ -16,6 +17,8 @@ class App {
     // Register click listener
     this.clearButton.onclick = this.clear;
     this.loadButton.onclick = this.run;
+    // this.onSelectedBookingDate.onchange  = this.getTanggalBooking;
+    // this.onSelectedTimeBooking.onchange = this.getTanggalBooking;
     this.onSubmitFormFilter.addEventListener("submit", this.onFilteredCar, true);
   }
 
@@ -30,8 +33,13 @@ class App {
 
   onFilteredCar = async(event) => {
     this.clear();
+    const bookingDatesTime = this.onSelectedBookingDate.value +'T'+ this.onSelectedTimeBooking.value + ':00Z';
+    const bookingDates = Date.parse(bookingDatesTime);
     const filteredCar = await Binar.listCars(data =>  {
-      return data.capacity >= this.onSelectedTotalPassenger.value
+      const dateAvailable = Date.parse(data.availableAt);
+      if (dateAvailable >= bookingDates && data.capacity >= this.onSelectedTotalPassenger.value) {
+            return data.availableAt && data.capacity;
+      }
     });
     Car.init(filteredCar);
     this.run();
