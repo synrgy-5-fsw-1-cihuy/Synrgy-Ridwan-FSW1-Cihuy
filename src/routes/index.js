@@ -1,13 +1,14 @@
 const { Router } = require("express");
-
+const models = require("../db/models");
 const router = Router();
+const Role = models.role;
 
-router.get("/", (req, res) => {
-  res.send("1");
+router.get("/", (request, response) => {
+  response.status(200).json({ data: result });
 });
 
-router.get("/:id", (req, res) => {
-  res.send("2");
+router.get("/:id", async (request, response) => {
+  response.status(200).json({ data: result });
 });
 
 router.post("/", (req, res) => {

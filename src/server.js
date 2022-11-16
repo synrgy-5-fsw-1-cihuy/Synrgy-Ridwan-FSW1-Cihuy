@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 8080;
 
 const start = async () => {
   try {
-    await models.sequelize.sync();
+    await models.sequelize.authenticate();
     console.info(
       "⚡️[database]: Database connection has been established successfully."
     );
