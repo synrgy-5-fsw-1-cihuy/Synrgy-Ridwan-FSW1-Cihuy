@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "Manakali32!",
-    "database": "postgres",
-    "host": "db.tqjsuqvppmuucwkcbfco.supabase.co",
+    "username": "ridwan",
+    "password": "ridwan070500",
+    "database": "mini-challenge-crud",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
