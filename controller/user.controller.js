@@ -6,7 +6,7 @@ const User = models.User;
 const saltRounds = 10;
 
 
-const registerUser = async (request, response) => {
+const doRegisterUserHandler = async (request, response) => {
     const form = formidableMiddleware({ });
 
     form.parse(request, async (err, fields, files) => {
@@ -60,7 +60,7 @@ const registerUser = async (request, response) => {
 };
 
 
-const loginHandler = async (request, response) => {
+const doLoginHandler = async (request, response) => {
     const form = formidableMiddleware({ });
 
     form.parse(request, async (err, fields, files) => {
@@ -109,6 +109,29 @@ const loginHandler = async (request, response) => {
         };
 
     });
-}; 
+};
 
-module.exports = { registerUser, loginHandler };
+const doGetProfileHandler = async (request, response) => {
+    const authHeader = request.headers["authorization"];
+    const token = authHeader && authHeader.split(' ')[1];
+
+    const decodedToken = await jwtTokenUtil.checkTokenJwt(token);
+
+    const userFindById = await User.findByPk(decodedToken.id);
+
+    if (userFindById == null) {
+        return response.status(404).json({error: "User not found"});
+    };
+
+    response.status(200).json({
+        data: {
+            id: userFindById.id,
+            email: userFindById.email,
+            role: userFindById.role,
+            createdAt: userFindById.createdAt,
+            updatedAt: userFindById.updatedAt
+        }
+    });
+};
+
+module.exports = { doRegisterUserHandler, doLoginHandler, doGetProfileHandler };
