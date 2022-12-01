@@ -19,17 +19,31 @@ const registerUser = async (request, response) => {
         try {
             // Process hashing plain password
             const hashedPassword = await bcrypt.hash(fields.password, saltRounds);
+            let user = {};
 
-            const user = await User.create({
-                email: fields.email,
-                password: hashedPassword
-            });
+            if (fields.role == "SUPERADMIN") {
+                // do create admin user
+                user = await User.create({
+                    email: fields.email,
+                    password: hashedPassword,
+                    role: "ADMIN"
+                });
+            }
+
+            if (fields.role == "MEMBER") {
+                user = await User.create({
+                    email: fields.email,
+                    password: hashedPassword,
+                    role: "MEMBER"
+                });
+            }         
 
             response.status(201).json({
                 message: "Registered successfully", 
                 data: {
                     id: user.id,
                     email: user.email,
+                    role: user.role,
                     createdAt: user.createdAt,
                     updatedAt: user.updatedAt
 
