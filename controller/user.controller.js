@@ -93,7 +93,8 @@ const loginHandler = async (request, response) => {
 
             const tokenGenerated = jwtTokenUtil.encodeTokenJwt({
                 id: userByEmail.id,
-                email: userByEmail.email
+                email: userByEmail.email,
+                role: userByEmail.role
             });
 
             response.status(200).json({

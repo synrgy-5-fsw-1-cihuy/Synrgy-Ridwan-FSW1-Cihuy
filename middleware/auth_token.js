@@ -4,7 +4,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 function authToken(request, response, next) {
-    console.log(request.headers);
     const authHeader = request.headers["authorization"];
     const token = authHeader && authHeader.split(' ')[1];
 
@@ -16,6 +15,18 @@ function authToken(request, response, next) {
         if (decoded == null) {
             response.status(401).json({error: "Unautorized access"});
         };
+        console.log(decoded);
+
+        if (decoded.role == "ADMIN" || decoded.role == "SUPERADMIN") {
+            next();
+            return;
+        }
+
+        if (decoded.role == "MEMBER") {
+            if (request.method == "POST" || request.method == "PUT" || request.method == "DELETE") {
+                return response.status(401).json({error: "You cannot doing this operation"});
+            }
+        }
 
         next();
     } catch(err) {
