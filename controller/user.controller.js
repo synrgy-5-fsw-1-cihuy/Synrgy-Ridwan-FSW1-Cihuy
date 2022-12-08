@@ -21,6 +21,18 @@ const doRegisterUserHandler = async (request, response) => {
             const hashedPassword = await bcrypt.hash(fields.password, saltRounds);
             let user = {};
 
+            const authHeader = request.headers["authorization"];
+            if(!authHeader){
+                return response.status(404).json({message: "Authorized Failed"});
+            }
+            const token = authHeader && authHeader.split(' ')[1];
+            const decodedToken = await jwtTokenUtil.checkTokenJwt(token);
+            const userFindById = await User.findByPk(decodedToken.id);
+            if (!userFindById) {
+                return response.status(404).json({error: "User not found"});
+            };
+
+            //Register user by superadmin
             if (fields.role == "SUPERADMIN") {
                 // do create admin user
                 user = await User.create({
@@ -30,7 +42,8 @@ const doRegisterUserHandler = async (request, response) => {
                 });
             }
 
-            if (fields.role == "MEMBER") {
+            //Register member 
+            if (userFindById.role == "MEMBER") {
                 user = await User.create({
                     email: fields.email,
                     password: hashedPassword,
@@ -66,7 +79,6 @@ const doLoginHandler = async (request, response) => {
     form.parse(request, async (err, fields, files) => {
         if (err) {
             next(err);
-            
             return;
         };
 
@@ -99,7 +111,8 @@ const doLoginHandler = async (request, response) => {
 
             response.status(200).json({
                 message: "Logged successfully",
-                token: tokenGenerated
+                token: tokenGenerated,
+                role: userByEmail.role
             });
 
             return;

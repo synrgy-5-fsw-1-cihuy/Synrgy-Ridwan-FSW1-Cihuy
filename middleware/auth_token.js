@@ -12,18 +12,19 @@ function authToken(request, response, next) {
     try {
         const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
 
-        if (decoded == null) {
-            response.status(401).json({error: "Unautorized access"});
+        if(decoded == null){
+            response.status(401).json({eror:"Unauthorized access"});
         };
+
         console.log(decoded);
 
-        if (decoded.role == "ADMIN" || decoded.role == "SUPERADMIN") {
+        if(decoded.role == "ADMIN" || decoded.role == "SUPERADMIN"){
             next();
             return;
         }
 
-        if (decoded.role == "MEMBER") {
-            if (request.method == "POST" || request.method == "PUT" || request.method == "DELETE") {
+        if(decoded.role == "MEMBER"){
+            if(request.method == "POST" || request.method == "PUT" || request.method == "DELETE"){
                 return response.status(401).json({error: "You cannot doing this operation"});
             }
         }

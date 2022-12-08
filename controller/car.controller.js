@@ -1,6 +1,8 @@
+const { response } = require('express');
 const formidableMiddleware = require('formidable');
 const cloudinaryConfig = require('../config/cloudinary.js');
 const models = require('../models');
+const { updateCar } = require('../repository/car.repository.js');
 const Car = models.Car;
 const carService = require('../service/car.service.js');
 
@@ -23,7 +25,7 @@ const getCarByIdHandler = async (request, response) => {
     response.status(200).json({data: carById});
 };
 
-// Create Car Handler
+
 const createCarHandler = (request, response) => {
     const form = formidableMiddleware({ });
 
@@ -53,4 +55,38 @@ const createCarHandler = (request, response) => {
     });
 };
 
-module.exports = {getAllCarHandler, getCarByIdHandler, createCarHandler};
+const updateCarHandler = async (request, response) => {
+    const { id } = request.params;
+    const form = formidableMiddleware({ });
+
+    await form.parse(request, async(err, fields, files)=>{
+        if(err){
+            next(err);
+            return;
+        };
+
+        try {
+            const updated = await carService.updateCar(fields, id);
+            return response.status(200).json({message: "Success Updated!", data: id});
+        } catch (error) {
+            return response.status(500).json({message:"Internal Server Error"});
+        }
+    })
+};
+
+const destroyCarHandler = async (request, response) => {
+    const { id } = request.params;
+    try {
+
+        const deleted = await carService.deleteCar(id);
+        return response.status(200).json({message: "Success Deleted", data: id});
+        
+    } catch (error) {
+        return response.status(500).json({message:"Internal Server Error"});
+    }
+}
+
+
+
+
+module.exports = {getAllCarHandler, getCarByIdHandler, createCarHandler, updateCarHandler, destroyCarHandler};
