@@ -1,4 +1,6 @@
 import {} from 'react-bootstrap';
+import facebook from '../../assets/img/icon_facebook.png';
+
 const Footer = () => {
     return(
         <footer>
@@ -21,23 +23,23 @@ const Footer = () => {
             <div className="container">
               <div className="row row-cols-auto">
                 <div className="col">
-                  <a href="www.facebook.com"><img src={require('../../assets/img/icon_facebook.png')} width="32px" height="32px" /></a>
+                  <a href="www.facebook.com"><img src={facebook} width="32px" height="32px" alt='fb' /></a>
                 </div>
                 <div className="col">
-                  <a href="www.instagram.com"><img src={require('../../assets/img/icon_mail.png')} width="32px" height="32px" /></a>
+                  <a href="www.instagram.com"><img src={require('../../assets/img/icon_mail.png')} width="32px" height="32px" alt='ig' /></a>
                 </div>
                 <div className="col">
-                  <a href="www.twitter.com"><img src={require('../../assets/img/icon_twitch.png')} width="32px" height="32px" /></a>
+                  <a href="www.twitter.com"><img src={require('../../assets/img/icon_twitch.png')} width="32px" height="32px" alt='twitch'/></a>
                 </div>
                 <div className="col">
-                  <a href="www.mail.goole.com"><img src={require('../../assets/img/icon_twitter.png')} width="32px" height="32px" /></a>
+                  <a href="www.mail.goole.com"><img src={require('../../assets/img/icon_twitter.png')} width="32px" height="32px" alt='twitter'/></a>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-md-3">
             <p>Copyright Binar 2022</p>
-            <img src />
+            {/* <img src /> */}
           </div>
         </div>
       </footer>

@@ -4,7 +4,7 @@ const Our = () => {
         <section id="our">
         <div className="row mx-auto mt-5">
           <div className="col-md-6">
-            <img src={require('../../../assets/img/service.png')} className="service" style={{marginTop: '40px'}} />
+            <img src={require('../../../assets/img/service.png')} className="service" style={{marginTop: '40px'}} alt='service' />
           </div>
           <div className="col-md-6 justify-content-center">
             <p className="title">
@@ -19,11 +19,11 @@ const Our = () => {
               saepe non repudiandae cupiditate animi.
             </p>
             <ul className="list-unstyled" id="list">
-              <li className="mb-2"><img src={require('../../../assets/img/check.png')} /> Sewa Mobil Dengan Supir di Bali 12 Jam</li>
-              <li className="mb-2"><img src={require('../../../assets/img/check.png')} /> Sewa Mobil Lepas Kunci di Bali 24 Jam</li>
-              <li className="mb-2"><img src={require('../../../assets/img/check.png')} /> Sewa Mobil Jangka Panjang Bulanan</li>
-              <li className="mb-2"><img src={require('../../../assets/img/check.png')} /> Gratis Antar - Jemput Mobil di Bandara</li>
-              <li className="mb-2"><img src={require('../../../assets/img/check.png')} /> Layanan Airport Transfer/Drop In Out</li>
+              <li className="mb-2"><img src={require('../../../assets/img/check.png')} alt='check'/> Sewa Mobil Dengan Supir di Bali 12 Jam</li>
+              <li className="mb-2"><img src={require('../../../assets/img/check.png')} alt='check'/> Sewa Mobil Lepas Kunci di Bali 24 Jam</li>
+              <li className="mb-2"><img src={require('../../../assets/img/check.png')} alt='check'/> Sewa Mobil Jangka Panjang Bulanan</li>
+              <li className="mb-2"><img src={require('../../../assets/img/check.png')} alt='check'/> Gratis Antar - Jemput Mobil di Bandara</li>
+              <li className="mb-2"><img src={require('../../../assets/img/check.png')} alt='check'/> Layanan Airport Transfer/Drop In Out</li>
             </ul>
           </div>
         </div>

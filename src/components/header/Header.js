@@ -33,7 +33,7 @@ const Header = () => {
             <button type="button" className="btn btn-success" id="btnsw" href>Mulai Sewa Mobil</button>
           </div>
           <div className="col-md-6">
-            <img src={require("../../assets/img/car.png")} className="mobil" style={{maxWidth: '100%', height: 'auto'}} />
+            <img src={require("../../assets/img/car.png")} className="mobil" style={{maxWidth: '100%', height: 'auto'}} alt='mobil' />
           </div>
         </div>
       </section>

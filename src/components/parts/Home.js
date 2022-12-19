@@ -5,6 +5,7 @@ import Testimonial from "./homepage/Testimonial";
 import Whyus from "./homepage/Whyus";
 import Footer from "../footer/Footer";
 import Faq from "./homepage/Faq";
+import '../../assets/css/style.css';
 
 const Home = () => {
     return(

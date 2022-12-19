@@ -1,32 +1,32 @@
 header {
     background-color: #F1F3FF;
     padding: 50px;
-
-}
-
-body {
+  
+  }
+  
+  body {
     font-family: 'Sans-Serif';
-}
-
-main {
+  }
+  
+  main {
     background-color: white;
-}
-
-#banner h1 {
+  }
+  
+  #banner h1 {
     position: absolute;
     width: 568px;
     height: 108px;
     left: 136px;
     top: 177px;
-
+  
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 150%;
-}
-
-@media screen and (max-width:800px) {
+  }
+  
+  @media screen and (max-width:800px) {
     #banner h1 {
         position: absolute;
         width: 400px;
@@ -41,23 +41,23 @@ main {
         line-height: 200%;
         margin-right: 50px;
     }
-}
-
-#banner p {
+  }
+  
+  #banner p {
     position: absolute;
     width: 468px;
     height: 60px;
     left: 136px;
     top: 301px;
-
+  
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
-}
-
-#banner button {
+  }
+  
+  #banner button {
     box-sizing: border-box;
     position: relative;
     width: 170px;
@@ -69,25 +69,25 @@ main {
     justify-content: center;
     align-items: center;
     padding: 8px 12px;
-}
-
-#banner .mobil {
+  }
+  
+  #banner .mobil {
     width: 660px;
     height: 407px;
     left: 1440px;
     top: 97px;
-}
-
-
-#our .service {
+  }
+  
+  
+  #our .service {
     position: absolute;
     width: 450px;
     height: 430px;
     left: 206px;
     top: 604px;
-}
-
-@media screen and (max-width: 800px) {
+  }
+  
+  @media screen and (max-width: 800px) {
     #our .service {
         position: absolute;
         width: 180px;
@@ -95,46 +95,46 @@ main {
         left: 360px;
         top: 740px;
     }
-}
-
-
-.navbar-light .navbar-nav .nav-link {
+  }
+  
+  
+  .navbar-light .navbar-nav .nav-link {
     color: red;
-}
-
-
-#btnsw {
+  }
+  
+  
+  #btnsw {
     margin-left: 50%;
-}
-
-#our p {
+  }
+  
+  #our p {
     margin-top: 30px;
     margin-left: 30px;
-}
-
-#our ul {
+  }
+  
+  #our ul {
     margin-top: 30px;
     margin-left: 30px;
-}
-
-#our .title {
+  }
+  
+  #our .title {
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
-}
-
-#our .subtitle {
+  }
+  
+  #our .subtitle {
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
-
-}
-
-#why .title {
+  
+  }
+  
+  #why .title {
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 700;
@@ -142,37 +142,37 @@ main {
     line-height: 36px;
     margin-top: 150px;
     padding-left: 60px;
-}
-
-#why .subtitle {
+  }
+  
+  #why .subtitle {
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
     padding-left: 60px;
-}
-
-#why .card {
+  }
+  
+  #why .card {
     padding: 15px;
-}
-
-
-#why h5 {
+  }
+  
+  
+  #why h5 {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-}
-
-#why p {
+  }
+  
+  #why p {
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
-
-}
-
-@media screen and (max-width:800px) {
+  
+  }
+  
+  @media screen and (max-width:800px) {
     #why .title {
         font-family: 'Helvetica';
         font-style: normal;
@@ -212,31 +212,31 @@ main {
         font-size: 14px;
     
     }
-}
-
-#testimonial .title {
+  }
+  
+  #testimonial .title {
     text-align: center;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-
-}
-
-#testimonial .subtitle {
+  
+  }
+  
+  #testimonial .subtitle {
     text-align: center;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
-}
-
-#testimonial {
+  }
+  
+  #testimonial {
     margin-top: 100px;
-}
-
-
-.stars {
+  }
+  
+  
+  .stars {
     color: orange;
     display: flex;
     flex-direction: row;
@@ -247,30 +247,30 @@ main {
     order: 0;
     flex: none;
     width: 80px;
-}
-
-#testimonial img {
+  }
+  
+  #testimonial img {
     margin-top: 50px;
     margin-left: 30px;
-}
-
-#testimonial p {
+  }
+  
+  #testimonial p {
     margin-top: 20px;
-}
-
-#testimonial .card {
+  }
+  
+  #testimonial .card {
     background-color: aliceblue;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-}
-
-.btn-carousel img:hover {
+  }
+  
+  .btn-carousel img:hover {
     color: grey;
-
-}
-
-#sewa {
+  
+  }
+  
+  #sewa {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: auto;
@@ -280,62 +280,63 @@ main {
     height: 230px;
     background-color: blue;
     color: white;
-}
-
-#sewa h5 {
+  }
+  
+  #sewa h5 {
     font-size: 26px;
-}
-
-#sewa p {
+  }
+  
+  #sewa p {
     font-size: 12px;
-}
-
-#faq .accordion-item,
-#faq .accordion,
-#faq .accordion-header {
+  }
+  
+  #faq .accordion-item,
+  #faq .accordion,
+  #faq .accordion-header {
     border: none;
-}
-
-#faq {
+  }
+  
+  #faq {
     padding: 10px;
     margin: 100px 30px;
-}
-
-#faq .title {
+  }
+  
+  #faq .title {
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 36px;
-
+  
     margin-left: 30px;
-}
-
-#faq .subtitle {
+  }
+  
+  #faq .subtitle {
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
     line-height: 20px;
-
+  
     margin-left: 30px;
-}
-
-#alamat {
+  }
+  
+  #alamat {
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
-}
-
-#navigation {
+  }
+  
+  #navigation {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-}
-
-footer {
+  }
+  
+  footer {
     padding: 20px;
     margin: 100px 30px;
-}
+  }
+  
