@@ -1,38 +1,341 @@
-.App {
-  text-align: center;
+header {
+  background-color: #F1F3FF;
+  padding: 50px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Sans-Serif';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+main {
+  background-color: white;
+}
+
+#banner h1 {
+  position: absolute;
+  width: 568px;
+  height: 108px;
+  left: 136px;
+  top: 177px;
+
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+}
+
+@media screen and (max-width:800px) {
+  #banner h1 {
+      position: absolute;
+      width: 400px;
+      height: 108px;
+      left: 100px;
+      top: 150px;
+  
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 500;
+      font-size: px;
+      line-height: 200%;
+      margin-right: 50px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#banner p {
+  position: absolute;
+  width: 468px;
+  height: 60px;
+  left: 136px;
+  top: 301px;
+
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#banner button {
+  box-sizing: border-box;
+  position: relative;
+  width: 170px;
+  height: 45px;
+  left: 100px;
+  top: 280px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 8px 12px;
+}
+
+#banner .mobil {
+  width: 660px;
+  height: 407px;
+  left: 1440px;
+  top: 97px;
+}
+
+
+#our .service {
+  position: absolute;
+  width: 450px;
+  height: 430px;
+  left: 206px;
+  top: 604px;
+}
+
+@media screen and (max-width: 800px) {
+  #our .service {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      left: 360px;
+      top: 740px;
+  }
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: red;
+}
+
+
+#btnsw {
+  margin-left: 50%;
+}
+
+#our p {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+#our ul {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+#our .title {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+#our .subtitle {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+#why .title {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 150px;
+  padding-left: 60px;
+}
+
+#why .subtitle {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 60px;
+}
+
+#why .card {
+  padding: 15px;
+}
+
+
+#why h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#why p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+
+}
+
+@media screen and (max-width:800px) {
+  #why .title {
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      margin-top: 150px;
+      padding-left: 60px;
+  }
+  
+  #why .subtitle {
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+      padding-left: 60px;
+  }
+  
+  #why .card {
+      padding: 20px 20px;
+      margin-top: 50px;
+      align-items: center;
+  }
+  
+  
+  #why h5 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+  }
+  
+  #why p {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+  
+  }
+}
+
+#testimonial .title {
+  text-align: center;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+
+}
+
+#testimonial .subtitle {
+  text-align: center;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+#testimonial {
+  margin-top: 100px;
+}
+
+
+.stars {
+  color: orange;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-grow: 0;
+  margin-top: 20px;
+  height: 16px;
+  order: 0;
+  flex: none;
+  width: 80px;
+}
+
+#testimonial img {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+#testimonial p {
+  margin-top: 20px;
+}
+
+#testimonial .card {
+  background-color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.btn-carousel img:hover {
+  color: grey;
+
+}
+
+#sewa {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  width: 850px;
+  height: 230px;
+  background-color: blue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#sewa h5 {
+  font-size: 26px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#sewa p {
+  font-size: 12px;
+}
+
+#faq .accordion-item,
+#faq .accordion,
+#faq .accordion-header {
+  border: none;
+}
+
+#faq {
+  padding: 10px;
+  margin: 100px 30px;
+}
+
+#faq .title {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+
+  margin-left: 30px;
+}
+
+#faq .subtitle {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+
+  margin-left: 30px;
+}
+
+#alamat {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#navigation {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+footer {
+  padding: 20px;
+  margin: 100px 30px;
 }

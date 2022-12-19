@@ -1,42 +1,44 @@
-import { useEffect } from "react";
-import { connect } from "react-redux";
-import { addTodo, removeTodo } from "../store/Actions";
+import {} from "react-bootstrap";
 
-// Functional component
-const Header = ({ todoState, addNewTodo, removeTodoRecord }) => {
-
-    // Effect Hook
-    useEffect(() => {
-        console.log(todoState);
-    }, [todoState]);
-
-    const handleAddNewTodo = () => {
-        addNewTodo("Ipsum");
-    };
-
-    const handleRemoveTodo = () => {
-        removeTodoRecord();
-    }
-
-    return (
-        <div>
-            Header components is works!
-            <button onClick={() => handleAddNewTodo()}>Add New Todo</button>
-            <button onClick={() => handleRemoveTodo()}>Remove Todo</button>
-            { todoState.todos.map((todo, index) => {
-                return <li key={index}>{ todo }</li>
-            })}
+const Header = () => {
+  return (
+    <header>
+     <section id="nav-top">
+        <ul className="nav justify-content-end">
+          <li className="nav-item">
+            <a className="nav-link active" href="#our" style={{color: 'black'}}>Our Services</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#why" style={{color: 'black'}}>Why Us</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#testimonial" style={{color: 'black'}}>Testimonial</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#faq" style={{color: 'black'}}>FAQ</a>
+          </li>
+          <li className="nav-item nav nav-pills">
+            <button type="button" className="btn btn-success">Register</button>
+          </li>
+        </ul>
+      </section>
+      <section id="banner">
+        <div className="row mt-5">
+          <div className="col-md-6">
+            <h1>Sewa &amp; Rental Mobil Terbaik di kawasan Klaten</h1>
+            <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga
+              terjangkau. Selalu siap melayani kebutuhanmu
+              untuk sewa mobil selama 24 jam.
+            </p>
+            <button type="button" className="btn btn-success" id="btnsw" href>Mulai Sewa Mobil</button>
+          </div>
+          <div className="col-md-6">
+            <img src={require("../../assets/img/car.png")} className="mobil" style={{maxWidth: '100%', height: 'auto'}} />
+          </div>
         </div>
-    );
+      </section>
+    </header>
+  );
 };
 
-const mapStateToProps = (state) => ({
-    todoState: state.todoReducer
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    addNewTodo: (todo) => dispatch(addTodo(todo)),
-    removeTodoRecord: () => dispatch(removeTodo())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;
